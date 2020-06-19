@@ -2,6 +2,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+//Importar CORS para permitir acceso con distinto dominio
+const cors = require('cors');
 //Importar el router que creamos para la api
 const router = require('./routes/api/user');
 
@@ -11,6 +13,7 @@ const port = process.env.port || 3000;
 const db = process.env.MONGODB_URI || 'mongodb://localhost/hellodb';
 
 const app = express();
+app.use(cors());
 
 //Conexión a la base de datos
 mongoose.set('useUnifiedTopology', true);
