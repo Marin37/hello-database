@@ -1,6 +1,6 @@
 //Importar mongoose y modelo User
 const mongoose = require('mongoose');
-const User = require('./models/user');
+const User = require('./models/User');
 
 //la URI de la db
 const db = 'mongodb+srv://hellodb:M4r1n0HDB@cluster0-hiuue.mongodb.net/hellodb?retryWrites=true&w=majority';
@@ -52,4 +52,4 @@ mongoose
       mongoose.connection.close();
     });
   })
-  .catch(err => console.error(`Connection error ${err}`));
+.catch(err => console.error(`Connection error ${err}`));

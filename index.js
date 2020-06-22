@@ -1,16 +1,15 @@
 //Importar Express y Mongoose
 const express = require('express');
 const mongoose = require('mongoose');
-
 //Importar CORS para permitir acceso con distinto dominio
 const cors = require('cors');
 //Importar el router que creamos para la api
-const router = require('./routes/api/user.js');
+const router = require('./routes/api/user');
 
 
 //Insertar Puerto y Database
-const port = process.env.port || 3000;
-const db = process.env.MONGODB_URI || 'mongodb://localhost/hellodb';
+const port = process.env.PORT        || 3000;
+const db   = process.env.MONGODB_URI || 'mongodb://localhost/hellodb';
 
 const app = express();
 

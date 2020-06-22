@@ -5,7 +5,7 @@ const express = require('express');
 const router = express.Router();
 
 //Importar el archivo User.js
-const User = require('../../models/user');
+const User = require('../../models/User');
 
 // GET en /api/users (todos los usuarios)
 router.get('/users', (req, res) => {
