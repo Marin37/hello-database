@@ -6,8 +6,7 @@ const UserSchema = new mongoose.Schema({
   id: Number,
   name: String,
   mail: String,
-  birthday: Date,
-  dni: Number
+  birthday: Date
 });
 
 //Creación del modelo llamado User y ↓formato↓

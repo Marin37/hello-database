@@ -13,6 +13,7 @@ const port = process.env.port || 3000;
 const db = process.env.MONGODB_URI || 'mongodb://localhost/hellodb';
 
 const app = express();
+
 app.use(cors());
 
 //Conexión a la base de datos
@@ -23,12 +24,12 @@ mongoose
   .then(() => {
     console.log(`DB connected @ ${db}`);
   })
-  .catch(err => console.error(`Connection error ${err}`));
+.catch(err => console.error(`Connection error ${err}`));
 
-//Usar el Router
+// usamos el router
 app.use('/api', router);
 
-//Para que el server escuche
+// el server escucha todo
 app.listen(port, () => {
-  console.log(`Server listening on ${port}`);
+  console.log(`Server listening on port ${port}`);
 });
