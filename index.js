@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 //Importar CORS para permitir acceso con distinto dominio
 const cors = require('cors');
 //Importar el router que creamos para la api
-const router = require('./routes/api/user');
+const router = require('./routes/api/user.js');
 
 
 //Insertar Puerto y Database
