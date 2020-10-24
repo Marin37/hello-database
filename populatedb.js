@@ -3,36 +3,40 @@ const mongoose = require('mongoose');
 const User = require('./models/User');
 
 //la URI de la db
-const db = 'mongodb+srv://hellodb:M4r1n0HDB@cluster0-hiuue.mongodb.net/hellodb?retryWrites=true&w=majority';
-//const db = 'mongodb://localhost/hellodb';
+//const db = 'mongodb+srv://hellodb:M4r1n0HDB@cluster0-hiuue.mongodb.net/hellodb?retryWrites=true&w=majority';
+const db = 'mongodb://localhost/hellodb';
 
 //Crear Array de Usuarios para subir a la db
 const users = [
   {
-      id: 1,
-      name: 'Juan',
-      mail: 'juan@mail.com',
-      birthday: '2000-05-24'
-    },
-    {
-      id: 2,
-      name: 'Maria',
-      mail: 'maria@mail.com',
-      birthday: '2000-02-13'
-    },
-    {
-      id: 3,
-      name: 'Pedro',
-      mail: 'pedro@mail.com',
-      birthday: '2000-05-19'
-    },
-    {
-      id: 4,
-      name: 'Julia',
-      mail: 'julia@mail.com',
-      birthday: '1998-03-01'
-    }
-  ];
+    id: 1,
+    name: 'Marino Juan',
+    mail: 'Marijmotta@gmail.com',
+    birthday: '2003-11-17',
+    dni: 45238286
+  },
+  {
+    id: 2,
+    name: 'Maria',
+    mail: 'maria@mail.com',
+    birthday: '2000-02-13',
+    dni: 37826941
+  },
+  {
+    id: 3,
+    name: 'Pedro',
+    mail: 'pedro@mail.com',
+    birthday: '2000-05-19',
+    dni: 45928174
+  },
+  {
+    id: 4,
+    name: 'Julia',
+    mail: 'julia@mail.com',
+    birthday: '1998-03-01',
+    dni: 14195204
+  }
+];
 
 // Conectarse a db
 mongoose.set('useUnifiedTopology', true);
